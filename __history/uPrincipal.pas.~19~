@@ -9,7 +9,6 @@ uses
 type
   TForm1 = class(TForm)
     Button1: TButton;
-    spNumThreads: TSpinEdit;
     procedure Button1Click(Sender: TObject);
   private
     cnt:integer;
@@ -24,12 +23,17 @@ implementation
 
 {$R *.dfm}
 
-uses uThSoma;
+uses uThSoma, ufrm2;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var Threads:TList;
+    sm:ThSoma;
     i:integer;
 begin
+
+   frm2:=Tfrm2.Create(nil);
+   frm2.Show;
+
   //colao cursor de carregando
   Screen.Cursor:=crHourGlass;
 
@@ -37,14 +41,14 @@ begin
 
   Threads := TList.Create;
 
-  for I := 0 to spNumThreads.value -1 do
+  for I := 0 to qtThreads -1 do
   begin
     Threads.Add(ThSoma.Create(IntToStr(i+1)));
     ThSoma(Threads[i]).priority := tpNormal;
     ThSoma(Threads[i]).OnTerminate:=terminado;
   end;
 
-  for I := 0 to spNumThreads.value -1 do
+  for I := 0 to qtThreads -1 do
     ThSoma(Threads[i]).Resume;
 
   Threads.Free;
@@ -55,9 +59,11 @@ procedure TForm1.terminado(Sender: TObject);
 begin
    Inc(cnt);
 
-   if cnt = spNumThreads.value then
+   if cnt = qtThreads then
    begin
-     Screen.Cursor:=crDefault
+     Screen.Cursor:=crDefault;
+     cnt:=0;
+     ShowMessage('Thread Finalizada');
    end;
 
 

@@ -2,7 +2,7 @@ object frm2: Tfrm2
   Left = 0
   Top = 0
   Caption = 'frm2'
-  ClientHeight = 369
+  ClientHeight = 231
   ClientWidth = 505
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,8 +16,8 @@ object frm2: Tfrm2
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 448
-    Top = 348
+    Left = 432
+    Top = 215
     Width = 31
     Height = 13
     Caption = 'Label1'
@@ -26,7 +26,7 @@ object frm2: Tfrm2
     Left = 8
     Top = 24
     Width = 489
-    Height = 289
+    Height = 185
     DataSource = ds
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -34,15 +34,6 @@ object frm2: Tfrm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
-  end
-  object Button1: TButton
-    Left = 88
-    Top = 328
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 1
-    OnClick = Button1Click
   end
   object con: TADOConnection
     Connected = True
