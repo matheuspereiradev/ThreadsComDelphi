@@ -4,13 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Samples.Spin;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Samples.Spin,REST.Types;
 
 type
   TForm1 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     cnt:integer;
     qtThreads:integer;
@@ -25,16 +27,18 @@ implementation
 
 {$R *.dfm}
 
-uses uThSoma, ufrm2;
+uses uThSoma, ufrm2, uDM;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var Threads:TList;
+    str:string;
     sm:ThSoma;
     i:integer;
 begin
 
    frm2:=Tfrm2.Create(nil);
    frm2.Show;
+
 
   cnt:=0;
 
@@ -53,6 +57,25 @@ begin
     ThSoma(Threads[i]).Resume;
 
   Threads.Free;
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var str:string;
+begin
+ frm2:=Tfrm2.Create(nil);
+   frm2.Show;
+
+   DM.rest.BaseURL:='http://localhost:3039/autores/register';
+   str  := '{"nome":"Papagaio"}';
+
+   DM.request.Body.Add(str,TRESTContentType.ctAPPLICATION_JSON);
+    try
+       DM.request.Execute;
+    except
+
+    end;
+
 
 end;
 

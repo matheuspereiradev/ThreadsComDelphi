@@ -30,6 +30,5 @@ object Form1: TForm1
     Height = 25
     Caption = 'Abrir form sem thread'
     TabOrder = 1
-    OnClick = Button2Click
   end
 end

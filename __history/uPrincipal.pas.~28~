@@ -36,13 +36,18 @@ begin
    frm2:=Tfrm2.Create(nil);
    frm2.Show;
 
-  cnt:=0;
+
+
+
+
+  {cnt:=0;
 
   Threads := TList.Create;
 
   for I := 0 to qtThreads -1 do
   begin
     Threads.Add(ThSoma.Create(IntToStr(i+1)));
+    //seta a prioridade da thread;
     ThSoma(Threads[i]).priority := tpNormal;
     //seta o metodo que vai deinir que quando finalizar incrementa 1 no cnt  serve so pra verificar se tds foram concluidos
     ThSoma(Threads[i]).OnTerminate:=terminado;
@@ -52,7 +57,7 @@ begin
     ThSoma(Threads[i]).Resume;
 
   Threads.Free;
-
+   }
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

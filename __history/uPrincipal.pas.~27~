@@ -10,8 +10,10 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     cnt:integer;
+    qtThreads:integer;
   public
     procedure terminado(Sender:TObject);
   end;
@@ -34,9 +36,6 @@ begin
    frm2:=Tfrm2.Create(nil);
    frm2.Show;
 
-  //colao cursor de carregando
-  Screen.Cursor:=crHourGlass;
-
   cnt:=0;
 
   Threads := TList.Create;
@@ -44,7 +43,9 @@ begin
   for I := 0 to qtThreads -1 do
   begin
     Threads.Add(ThSoma.Create(IntToStr(i+1)));
+    //seta a prioridade da thread;
     ThSoma(Threads[i]).priority := tpNormal;
+    //seta o metodo que vai deinir que quando finalizar incrementa 1 no cnt  serve so pra verificar se tds foram concluidos
     ThSoma(Threads[i]).OnTerminate:=terminado;
   end;
 
@@ -53,6 +54,12 @@ begin
 
   Threads.Free;
 
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  //define a quantidade de threads
+  qtThreads:=1;
 end;
 
 procedure TForm1.terminado(Sender: TObject);

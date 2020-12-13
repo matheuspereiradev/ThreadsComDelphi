@@ -12,7 +12,6 @@ object DM: TDM
     Method = rmPOST
     Params = <>
     Response = response
-    Timeout = 300000
     SynchronizedEvents = False
     Left = 216
     Top = 32
