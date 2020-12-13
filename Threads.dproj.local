@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/08/20 21:44:30.000.136,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/05 19:34:53.000.446,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 12:15:33.216,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 12:30:39.061,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/12/13 12:32:22.546,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/12/13 12:33:06.856,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/12/13 12:35:26.829,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\uThSoma.pas=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/12/13 12:35:33.968,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\uPrincipal.dfm=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/12/13 12:35:33.968,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\uPrincipal.pas=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 12:35:38.478,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Threads.dproj=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/12/13 12:40:25.506,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 12:43:11.302,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\uDM.dfm=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit1.dfm</Transaction>
+    <Transaction>2020/12/13 12:43:11.302,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\uDM.pas=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit1.pas</Transaction>
+    <Transaction>2020/12/13 14:50:30.856,=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit2.pas</Transaction>
+    <Transaction>2020/12/13 14:51:25.635,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\ufrm2.dfm=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit2.dfm</Transaction>
+    <Transaction>2020/12/13 14:51:25.635,C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\ufrm2.pas=C:\Users\MATHEUS-PC\Documents\Embarcadero\Studio\Threads\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

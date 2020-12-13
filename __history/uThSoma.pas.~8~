@@ -1,0 +1,41 @@
+unit uThSoma;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  ThSoma = class(TThread)
+  private
+    fthread:string;
+  public
+    constructor Create(Thread:string);
+  protected
+    procedure Execute; override;
+  end;
+
+implementation
+
+{ ThSoma }
+
+uses uDM;
+
+constructor ThSoma.Create(Thread: string);
+begin
+  inherited Create(true);
+
+  FreeOnTerminate := true;
+
+  fthread := Thread;
+end;
+
+procedure ThSoma.Execute;
+begin
+  DM.rest.BaseURL:='http://localhost:3039/autores/register';
+  DM.request.Body.Add('{"nome":"'+fthread+'"}');
+  DM.request.Execute;
+
+end;
+
+end.
